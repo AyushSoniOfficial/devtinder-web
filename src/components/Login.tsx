@@ -33,14 +33,7 @@ const Login = () => {
       setEmail("");
       setPassword("");
     } catch (err) {
-      console.error("Login failed:", err);
-
-      const message = axios.isAxiosError(err)
-        ? err.response?.data?.message ||
-          "Something went wrong while logging in. Please try again."
-        : "Something went wrong while logging in. Please try again.";
-
-      setError(message);
+      setError("Something went wrong while logging in. Please try again.");
     } finally {
       setLoading(false);
     }
