@@ -1,4 +1,4 @@
-const FeedCard = ({ user }) => {
+const UserCard = ({ user }) => {
   const { firstName, lastName, imageUrl, about, age, gender } = user;
 
   return (
@@ -21,4 +21,4 @@ const FeedCard = ({ user }) => {
   );
 };
 
-export default FeedCard;
+export default UserCard;

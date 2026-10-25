@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BASE_URL, END_POINTS } from "../config";
 import { addFeed } from "../store/slices/feedSlice";
-import FeedCard from "./FeedCard";
+import UserCard from "./UserCard";
 
 const Feed = () => {
   const feedData = useSelector((state) => state.feed);
@@ -31,7 +31,7 @@ const Feed = () => {
 
   return (
     <div className="flex justify-center m-20">
-      {feedData ? <FeedCard user={feedData[0]} /> : null}
+      {feedData ? <UserCard user={feedData[0]} /> : null}
     </div>
   );
 };
